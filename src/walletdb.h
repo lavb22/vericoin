@@ -195,6 +195,11 @@ public:
     int64_t GetAccountCreditDebit(const std::string& strAccount);
     void ListAccountCreditDebit(const std::string& strAccount, std::list<CAccountingEntry>& acentries);
 
+
+    //#########AGREGADO
+    bool WriteWatchOnly(const CScript &script);
+    bool EraseWatchOnly(const CScript &script);
+    //####FINAGREGADO
     DBErrors ReorderTransactions(CWallet*);
     DBErrors LoadWallet(CWallet* pwallet);
     static bool Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys);
